@@ -30,7 +30,7 @@ class WelcomeScreen extends StatelessWidget {
           ),
           SpaceWidget(0, 40),
           Textwidget(
-              "    Discover the best foods from over 1,000\nrestaurants and fast delivery to your doorstep",
+              "Discover the best foods from over 1,000\nrestaurants and fast delivery to your doorstep",
               13,
               Appcolorconst.txtcolor,
               ""),
@@ -43,13 +43,12 @@ class WelcomeScreen extends StatelessWidget {
               );
             },
             child: Buttonwidget(context, "Login", 18, Appcolorconst.white, "",
-                0.07, 1, Appcolorconst.orange, Appcolorconst.orange),
+                Appcolorconst.orange, Appcolorconst.orange),
           ),
           SpaceWidget(0, 20),
           Buttonwidget(context, "Create an account", 18, Appcolorconst.orange,
-              "", 0.07, 1, Appcolorconst.white, Appcolorconst.orange),
-          SpaceWidget(0, 30),
-          BottomLine(),
+              "", Appcolorconst.white, Appcolorconst.orange),
+          SpaceWidget(0, 20),
         ],
       ),
     );

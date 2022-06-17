@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/constant/sizedbox.dart';
 import 'package:food_app/constant/text_widget.dart';
 
 import 'colors.dart';
 
-Buttonwidget(BuildContext context, String name, double fontsize, int ColorCode,
-    String fontFamily, int BtnColor, int BorderColor) {
+IconButtonwidget(
+    BuildContext context,
+    String name,
+    double fontsize,
+    int ColorCode,
+    String fontFamily,
+    int BtnColor,
+    int BorderColor,
+    String IconSource) {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 20),
     child: Container(
@@ -15,8 +23,13 @@ Buttonwidget(BuildContext context, String name, double fontsize, int ColorCode,
         borderRadius: BorderRadius.circular(40),
         color: Color(BtnColor),
       ),
-      child: Center(
-        child: Textwidget(name, fontsize, ColorCode, fontFamily),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image(image: AssetImage(IconSource)),
+          SpaceWidget(20, 0),
+          Textwidget(name, fontsize, ColorCode, fontFamily),
+        ],
       ),
     ),
   );

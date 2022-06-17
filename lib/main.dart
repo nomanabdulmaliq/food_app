@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/constant/colors.dart';
+import 'package:food_app/screens/home.dart';
 import 'package:food_app/screens/splash_screen.dart';
 
 void main() {
@@ -13,8 +15,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(),
-      home: SplashScreen(),
+      theme: ThemeData(
+        appBarTheme: AppBarTheme(backgroundColor: Colors.white),
+      ),
+      home: HomeScreen(),
     );
   }
 }
